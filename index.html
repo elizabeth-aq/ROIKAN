@@ -1,0 +1,348 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EL ROI KAN | Fisioterapia</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:black;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+    url('https://images.unsplash.com/photo-1599058917765-a780eda07a3e?q=80&w=1400');
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    padding:40px 20px;
+}
+
+/* TITULOS */
+
+h1{
+    font-size:95px;
+    color:#ff5e00;
+    letter-spacing:5px;
+    text-shadow:0 0 30px rgba(255,94,0,0.8);
+    animation:aparecer 1s ease;
+}
+
+.subtitulo{
+    font-size:34px;
+    margin-top:10px;
+    margin-bottom:35px;
+    color:#ffffff;
+    animation:aparecer 1.5s ease;
+}
+
+/* LOGO */
+
+.logo{
+    width:260px;
+    margin-bottom:40px;
+    border-radius:50%;
+    box-shadow:0 0 40px rgba(255,94,0,0.7);
+    transition:0.4s;
+    animation:aparecer 2s ease;
+}
+
+.logo:hover{
+    transform:scale(1.08) rotate(2deg);
+}
+
+/* REDES */
+
+.redes{
+    display:flex;
+    gap:25px;
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-bottom:50px;
+}
+
+.redes a{
+    transition:0.3s;
+}
+
+.redes a:hover{
+    transform:translateY(-12px) scale(1.12);
+}
+
+.redes img{
+    width:90px;
+    height:90px;
+    border-radius:24px;
+    background:white;
+    padding:14px;
+    box-shadow:0 0 25px rgba(255,255,255,0.25);
+}
+
+/* BOTON */
+
+.btn{
+    background:#ff5e00;
+    color:white;
+    padding:20px 50px;
+    border-radius:60px;
+    text-decoration:none;
+    font-size:24px;
+    font-weight:bold;
+    transition:0.3s;
+    box-shadow:0 0 25px rgba(255,94,0,0.6);
+}
+
+.btn:hover{
+    background:#ff7b2e;
+    transform:scale(1.08);
+}
+
+/* FRASE */
+
+.frase{
+    margin-top:45px;
+    font-size:27px;
+    color:#e0e0e0;
+    max-width:1000px;
+    line-height:1.8;
+}
+
+/* BENEFICIOS */
+
+.beneficios{
+    background:#111;
+    padding:80px 30px;
+    text-align:center;
+}
+
+.beneficios h2{
+    font-size:55px;
+    color:#ff5e00;
+    margin-bottom:50px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    max-width:1300px;
+    margin:auto;
+}
+
+.card{
+    background:#1b1b1b;
+    padding:40px 25px;
+    border-radius:30px;
+    transition:0.4s;
+    box-shadow:0 0 25px rgba(0,0,0,0.5);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 30px rgba(255,94,0,0.35);
+}
+
+.card h3{
+    color:#ff5e00;
+    font-size:30px;
+    margin-bottom:20px;
+}
+
+.card p{
+    color:#ddd;
+    font-size:20px;
+    line-height:1.7;
+}
+
+/* FOOTER */
+
+footer{
+    background:black;
+    padding:30px;
+    text-align:center;
+    color:#777;
+    font-size:18px;
+}
+
+/* ANIMACION */
+
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+
+@media(max-width:700px){
+
+    h1{
+        font-size:58px;
+    }
+
+    .subtitulo{
+        font-size:24px;
+    }
+
+    .logo{
+        width:200px;
+    }
+
+    .frase{
+        font-size:21px;
+    }
+
+    .beneficios h2{
+        font-size:40px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <h1>EL ROI KAN</h1>
+
+    <p class="subtitulo">
+        Especialista en fisioterapia, recuperación muscular y bienestar físico
+    </p>
+
+    <img src="roikanlogo.jpeg" class="logo">
+
+    <!-- REDES -->
+
+    <div class="redes">
+
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/@winther.saludfisica?is_from_webapp=1&sender_device=pc" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png">
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/elroikann?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+        </a>
+
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/share/181PSApt3x/?mibextid=wwXIfr" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+        </a>
+
+        <!-- YouTube -->
+        <a href="https://www.youtube.com/" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png">
+        </a>
+
+        <!-- Ubicación -->
+        <a href="https://maps.app.goo.gl/V4sMaG4HJvhYgm9P8" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png">
+        </a>
+
+    </div>
+
+    <!-- BOTON -->
+
+    <a href="trabajos.html" class="btn">
+        Ver tratamientos y agendar cita
+    </a>
+
+    <!-- FRASE -->
+
+    <p class="frase">
+        En EL ROI KAN trabajamos para ayudarte a recuperar tu movilidad,
+        aliviar dolores musculares y mejorar tu calidad de vida mediante
+        terapias especializadas, atención profesional y tratamientos modernos
+        diseñados para tu bienestar físico.
+    </p>
+
+</section>
+
+<!-- BENEFICIOS -->
+
+<section class="beneficios">
+
+    <h2>¿Por qué elegir EL ROI KAN?</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Recuperación Física</h3>
+
+            <p>
+                Tratamientos enfocados en aliviar dolores musculares,
+                mejorar movimientos y acelerar tu recuperación.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Atención Profesional</h3>
+
+            <p>
+                Terapias personalizadas con dedicación, compromiso
+                y técnicas modernas de fisioterapia.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Bienestar Total</h3>
+
+            <p>
+                Nuestro objetivo es ayudarte a sentirte mejor,
+                recuperar energía y volver a tus actividades al 100%.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    © 2026 EL ROI KAN - Fisioterapia
+</footer>
+
+</body>
+</html>
+```
+
+```
+
+
+
+

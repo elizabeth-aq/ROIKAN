@@ -1,0 +1,437 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EL ROI KAN | Fisioterapia</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:black;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* FONDO PRINCIPAL */
+
+.banner{
+    min-height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.78), rgba(0,0,0,0.88)),
+    url('https://images.unsplash.com/photo-1518611012118-fb4f1c1b62b5?q=80&w=1600');
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:50px 20px;
+}
+
+/* TITULO */
+
+.banner h1{
+    font-size:90px;
+    color:#ff5e00;
+    letter-spacing:5px;
+    text-shadow:0 0 30px rgba(255,94,0,0.9);
+
+    animation:entrada 1s ease;
+}
+
+/* TEXTO */
+
+.banner p{
+    max-width:950px;
+    font-size:29px;
+    color:#e2e2e2;
+    line-height:1.8;
+    margin-top:20px;
+    margin-bottom:55px;
+
+    animation:entrada 1.5s ease;
+}
+
+/* GALERIA */
+
+.galeria{
+    width:100%;
+    max-width:1450px;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+
+    gap:35px;
+}
+
+/* CAJA VIDEO */
+
+.video-box{
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:35px;
+
+    box-shadow:
+    0 0 35px rgba(0,0,0,0.8),
+    0 0 25px rgba(255,94,0,0.15);
+
+    transition:0.5s;
+}
+
+/* EFECTO ENCIMA */
+
+.video-box::after{
+    content:'';
+
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(to top,
+    rgba(0,0,0,0.5),
+    transparent 40%);
+
+    pointer-events:none;
+}
+
+/* VIDEO */
+
+.video-box video{
+    width:100%;
+    height:700px;
+
+    object-fit:cover;
+
+    transform:scale(1.12);
+
+    transition:0.6s;
+
+    filter:contrast(1.05) saturate(1.08);
+}
+
+.video-box:hover video{
+    transform:scale(1.18);
+}
+
+/* TEXTO ENCIMA */
+
+.texto-video{
+    position:absolute;
+
+    bottom:25px;
+    left:25px;
+
+    z-index:2;
+
+    text-align:left;
+}
+
+.texto-video h2{
+    font-size:34px;
+    color:white;
+    margin-bottom:8px;
+
+    text-shadow:0 0 20px rgba(0,0,0,0.7);
+}
+
+.texto-video p{
+    font-size:19px;
+    color:#e0e0e0;
+    margin:0;
+}
+
+/* BOTON WHATSAPP */
+
+.whatsapp{
+    margin-top:70px;
+}
+
+.whatsapp a{
+    background:#25D366;
+    color:white;
+
+    text-decoration:none;
+
+    padding:22px 55px;
+
+    border-radius:70px;
+
+    font-size:28px;
+    font-weight:bold;
+
+    transition:0.35s;
+
+    box-shadow:
+    0 0 30px rgba(37,211,102,0.6);
+}
+
+.whatsapp a:hover{
+    transform:scale(1.1);
+    background:#2ef07a;
+}
+
+/* BENEFICIOS */
+
+.info{
+    width:100%;
+    max-width:1300px;
+
+    margin-top:90px;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+}
+
+.card{
+    background:rgba(255,255,255,0.05);
+
+    backdrop-filter:blur(8px);
+
+    border-radius:30px;
+
+    padding:35px 25px;
+
+    transition:0.4s;
+
+    border:1px solid rgba(255,255,255,0.08);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+
+    box-shadow:
+    0 0 25px rgba(255,94,0,0.25);
+}
+
+.card h3{
+    color:#ff5e00;
+    font-size:30px;
+    margin-bottom:20px;
+}
+
+.card p{
+    color:#ddd;
+    font-size:20px;
+    line-height:1.7;
+}
+
+/* VOLVER */
+
+.volver{
+    margin-top:50px;
+}
+
+.volver a{
+    color:#ff5e00;
+    text-decoration:none;
+    font-size:23px;
+    transition:0.3s;
+}
+
+.volver a:hover{
+    color:#ff884d;
+}
+
+/* FOOTER */
+
+footer{
+    background:#050505;
+    text-align:center;
+    padding:28px;
+    color:#777;
+    font-size:18px;
+}
+
+/* ANIMACION */
+
+@keyframes entrada{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:700px){
+
+    .banner h1{
+        font-size:52px;
+    }
+
+    .banner p{
+        font-size:21px;
+    }
+
+    .video-box video{
+        height:520px;
+    }
+
+    .texto-video h2{
+        font-size:26px;
+    }
+
+    .texto-video p{
+        font-size:16px;
+    }
+
+    .whatsapp a{
+        font-size:21px;
+        padding:18px 35px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="banner">
+
+    <h1>EL ROI KAN</h1>
+
+    <p>
+        Recupera tu movilidad, elimina dolores musculares y vuelve a sentirte al 100%
+        con tratamientos profesionales de fisioterapia, rehabilitación física
+        y terapias especializadas enfocadas en tu bienestar.
+    </p>
+
+    <!-- VIDEOS -->
+
+    <section class="galeria">
+
+        <!-- VIDEO 1 -->
+
+        <div class="video-box">
+
+            <video autoplay muted loop playsinline>
+                <source src="VIDE.mp4" type="video/mp4">
+            </video>
+
+            <div class="texto-video">
+                <h2>Recuperación Física</h2>
+                <p>Terapias modernas y atención profesional</p>
+            </div>
+
+        </div>
+
+        <!-- VIDEO 2 -->
+
+        <div class="video-box">
+
+            <video autoplay muted loop playsinline>
+                <source src="VIDA.mp4" type="video/mp4">
+            </video>
+
+            <div class="texto-video">
+                <h2>Bienestar Total</h2>
+                <p>Mejora tu movilidad y calidad de vida</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- BOTON -->
+
+    <div class="whatsapp">
+
+        <a href="https://wa.me/593987029935?text=Hola%20EL%20ROI%20KAN%20👋%20quiero%20agendar%20una%20cita%20de%20fisioterapia.%20Me%20gustaría%20recibir%20información%20sobre%20los%20tratamientos,%20horarios%20y%20disponibilidad.%20Muchas%20gracias." target="_blank">
+
+            Agendar cita ahora
+
+        </a>
+
+    </div>
+
+    <!-- BENEFICIOS -->
+
+    <section class="info">
+
+        <div class="card">
+
+            <h3>Atención Profesional</h3>
+
+            <p>
+                Tratamientos personalizados con técnicas modernas
+                enfocadas en aliviar dolores y mejorar tu recuperación.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Rehabilitación Especializada</h3>
+
+            <p>
+                Terapias físicas diseñadas para ayudarte a recuperar
+                movilidad, fuerza y bienestar.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Resultados Reales</h3>
+
+            <p>
+                Pacientes satisfechos gracias a procesos efectivos
+                y atención comprometida con tu salud.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- VOLVER -->
+
+    <div class="volver">
+        <a href="index.html">← Volver al inicio</a>
+    </div>
+
+</section>
+
+<footer>
+    © 2026 EL ROI KAN - Fisioterapia
+</footer>
+
+</body>
+</html>
+```
+
+
+
+
+
